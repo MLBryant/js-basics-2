@@ -31,6 +31,14 @@
 */
 
 //CODE HERE
+const pizza = {
+    name: 'Margherita Pizza',
+    price: 15.99,
+    category: 'Entree',
+    popularity: 8,
+    rating: 9.8,
+    tags: ['vegetarian', 'top-seller', 'non-GMO']
+}
 
 
 
@@ -43,6 +51,7 @@
 */
 
 //CODE HERE
+console.log(pizza.popularity);
 
 
 /*
@@ -53,6 +62,7 @@
 */
 
 //CODE HERE
+console.log(pizza.tags[1]);
 
 
 /*
@@ -63,6 +73,8 @@
 */
 
 //CODE HERE
+const {price} = pizza;
+console.log(price);
 
 
 /*
@@ -73,6 +85,8 @@
 */
 
 //CODE HERE
+const {category} = pizza;
+console.log(category);
 
 
 //////////////////PROBLEM 3////////////////////
@@ -88,6 +102,48 @@
 */
 
 //CODE HERE
+const foodArr = [
+    {
+       name: "Three Cheese Lasagna",
+       price: 16.99,
+       category: 'Entree',
+       popularity: 7.5,
+       rating: 8.5,
+       tags: ['vegetarian', 'pasta']
+    },
+    {
+        name: 'Fried Mozz',
+        price: 8.99,
+        category: 'appetizer',
+        popularity: 7,
+        rating: 8,
+        tags: ['vegetarian', 'fried', 'top-seller']
+    },
+    {
+        name: 'Chicken Marsala',
+        price: 21.99,
+        category: 'entree',
+        popularity: 8,
+        rating: 9,
+        tags: ['signature dish', 'top-seller']
+    },
+    {
+        name: 'Spaghetti With Meatballs',
+        price: 18.99,
+        category: 'entree',
+        popularity: 9,
+        rating: 9.2,
+        tags: ['signature dish', 'pasta', 'top-seller']
+    },
+    {
+        name: 'Eggplant Stacker',
+        price: 9.99,
+        category: 'appetizer',
+        popularity: 6,
+        rating: 7.2,
+        tags: ['vegetarian', 'fried']
+    }
+]
 
 
 
@@ -105,9 +161,10 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
+const filteredFood = foodArr.filter(item => item['tags'].includes('pasta'))
 
+console.log(filteredFood);
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -149,6 +206,16 @@
 */
 
 //CODE HERE
+const filterByProperty = (property, number, type) => {
+    let arr = [];
+    if (type === 'above') {
+        arr = foodArr.filter(item => item[property] > number);
+    }
+    if (type === 'below') {
+        arr = foodArr.filter(item => item[property] < number);
+    }
+    return arr;
+}
 
 
 /*
@@ -159,3 +226,4 @@
 */
 
 //CODE HERE
+console.log(filterByProperty('price', 18, 'below'));

@@ -35,7 +35,8 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((acc, cur) => acc + cur.price, 0);
+console.log(summedPrice);
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,7 +55,8 @@ const cart = [
 */
 
 //CODE HERE
-
+const calcFinalPrice = (cartTotal, couponValue, tax) => (cartTotal * (tax + 1) - couponValue).toFixed(2);
+console.log(calcFinalPrice(45.87, 10, .1));
 
 
 //////////////////PROBLEM 3////////////////////
@@ -79,7 +81,14 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+    1. Customer Name: for personalized greetings and to help match an order to a customer.
+       String: a customer's name will be a series of letters.
+    2. Customer Address: to provide delivery service to the customer and send them annoying newsletters
+       String: a customer's address will be a series of letters, numbers, and maybe symbols.
+    3. Customer Phone #: to communicate with customers concerning delivery orders, reservation changes, etc.
+       Number: a customer's phone # will be a series of numbers.
+    4. Past Order: for easy reorder of past order.
+       Array: to store multiple variables representing food objects. 
 */
 
 /*
@@ -88,3 +97,28 @@ const cart = [
 */
 
 //CODE HERE
+
+const customer1 = {
+    name: 'Mason Bryant',
+    address: '5291 Brightside View dr, Baton Rouge, LA, 70820',
+    phoneNumber: 9857741931,
+    pastOrder: [
+        {
+            name: 'Pizza',
+            ingredients: ['thin crust', 'cheese', 'pepperoni'],
+            price: 15.99
+        },
+        {
+            name: 'chicken',
+            type: 'buffalo',
+            price: 8.99
+        },
+        {
+            name: '2-liter',
+            type: 'Dr. Pepper',
+            price: 2.99
+        }
+    ]
+}
+
+console.log(customer1.pastOrder[0]);
