@@ -24,7 +24,7 @@
 //CODE HERE
 const greetUser = username => `Welcome back, ${username}`
 
-// console.log(greetUser('Mason'));
+console.log(greetUser('Mason'));
 
 
 
@@ -60,8 +60,8 @@ const canWeDeliver = zipCode => {
     return 'Sorry, you\'re outside of our delivery area.'
 }
 
-// console.log(canWeDeliver(85213));
-// console.log(canWeDeliver(98732));
+console.log(canWeDeliver(85213));
+console.log(canWeDeliver(98732));
 
 /* 
     Problem 2 Continued
@@ -88,8 +88,8 @@ const canWeDeliverTwo = zipCode => {
     return 'Sorry, you\'re outside of our delivery area.'
 }
 
-// console.log(canWeDeliverTwo(85213));
-// console.log(canWeDeliverTwo(98732));
+console.log(canWeDeliverTwo(85213));
+console.log(canWeDeliverTwo(98732));
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -126,7 +126,7 @@ const deals = [
 
 //CODE HERE
 deals[0]["title"] = deals[0]['title'].replace('15', '10');
-// console.log(deals);
+console.log(deals);
 
 
 
@@ -145,4 +145,4 @@ deals[0]["title"] = deals[0]['title'].replace('15', '10');
 
 //CODE HERE
 deals[1]['desc'] = deals[1]['desc'].replace('March', 'April');
-// console.log(deals);
+console.log(deals);
